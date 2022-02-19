@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int j, a = 0, e = 0, i = 0, o = 0, u = 0,temp=0;
+	char str[100];
+	cout << "Enter a sentence: ";
+	cin.getline(str, 100);
+	for (j = 0; str[j] != '\0'; j++)
+	{
+		if (str[j] == 'a' || str[j] == 'A')
+		{
+			a++;
+			temp = j;
+			if (str[j]==65)
+			cout << "\"A\" found at : " << temp << endl;
+			if (str[j] == 97)
+				cout << "\"a\" found at : " << temp << endl;
+		}
+		if (str[j] == 'e' || str[j] == 'E')
+		{
+			temp = 0;
+			e++;
+			temp = j;
+			if (str[j] == 69)
+				cout << "\"E\" found at : " << temp << endl;
+			if (str[j] == 101)
+				cout << "\"e\" found at : " << temp << endl;
+		}
+		if (str[j] == 'i' || str[j] == 'I')
+		{
+			temp = 0;
+			i++;
+			temp = j;
+			if (str[j] == 105)
+				cout << "\"i\" found at : " << temp << endl;
+			if (str[j] == 73)
+				cout << "\"I\" found at : " << temp << endl;
+		}
+		if (str[j] == 'o' || str[j] == 'O')
+		{
+			temp = 0;
+			o++;
+			temp = j;
+			if (str[j] == 111)
+				cout << "\"o\" found at : " << temp << endl;
+			if (str[j] == 79)
+				cout << "\"O\" found at : " << temp << endl;
+		}
+		if (str[j] == 'u' || str[j] == 'U')
+		{
+			temp = 0;
+			u++;
+			temp = j;
+			if (str[j] == 117)
+				cout << "\"u\" found at : " << temp << endl;
+			if (str[j] == 85)
+				cout << "\"U\" found at : " << temp << endl;
+		}
+	}
+	cout << "Number of a=" << a << endl;
+	cout << "Number of e=" << e << endl;
+	cout << "Number of i=" << i << endl;
+	cout << "Number of o=" << o << endl;
+	cout << "Number of u=" << u << endl;
+	return 0;
+}//by me
