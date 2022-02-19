@@ -1,0 +1,31 @@
+#include<iostream>
+#define THK 50
+using namespace std;
+int main()
+{
+	char arr[THK] = {}, arr1[THK] = {}, arr2[10] = {}, one, two;
+	int k, i;
+	//cout << "Enter size: ";
+	//cin >> one;
+	//cout << "Enter size: ";
+	//cin >> two;
+	cout << "Enter in first array: \n";
+	cin.getline(arr, 50);
+	cout << "Enter in second array: \n";
+	cin.getline(arr1, 50);
+	for (i = 0; arr[i] != '\0'; i++)
+	{
+		arr2[i] = arr[i];
+	}
+	k = i;
+	for (i = 0;arr1[i] != '\0'; i++)
+	{
+		arr2[k] = arr1[i];
+		k++;
+	}
+	for ( i = 0; i < k; i++)
+		cout << arr2[i];
+	cout << endl;
+	return 0;
+}
+																																																																																																																														                        
