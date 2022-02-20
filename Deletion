@@ -1,0 +1,50 @@
+#include<iostream>
+#include<time.h>
+using namespace std;
+int main()
+{
+	int arr[10] = {},i=0,tot=10,elem,found=0;
+	srand(time(0));
+	char stop = 0;
+	cout << "Elements are: \n";
+	while (i < tot)
+	{
+		arr[i] = rand() % 100;
+		cout << arr[i] << " , ";
+		i++;
+	}
+	cout << endl;
+	while (true)
+	{
+		cout << "Enter element to delete: ";
+		cin >> elem;
+		for (i = 0; i < tot; i++)
+		{
+			if (arr[i] == elem)
+			{
+				for (int j = i; j < (tot - 1); j++)
+					arr[j] = arr[j + 1];
+				found++;
+				i--;
+				tot--;
+			}
+		}
+		if (found == 0)
+		{
+			cout << "\nElement doesn't found...!!!\n";
+		}
+		else
+			cout << "\nElement deleted successfully..!!!\n";
+		for (i = 0; i < tot; i++)
+			cout << arr[i] << " , ";
+		cout << "Enter t to restart: ";
+		cin >> stop;
+		if (stop == 't')
+			continue;
+		else if (stop != 't')
+			break;
+	}
+
+	system("pause");
+	return 0;
+}
